@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .SearchContainer {
+        /* border: 2px solid red; */
+        border-radius: 50px;
+        width: 500px;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.5);
+      }
+      .Seachbox {
+        padding-left: 20px;
+        display: inline-block;
+        height: 50px;
+        border: none;
+        background-color: transparent;
+        font-size: 24px;
+        width: 80%;
+      }
+      .SearchIconContainer {
+        display: inline-block;
+        padding-top: 30px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background-color: transparent;
+      }
+      .SearchIcon {
+        display: inline-block;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p
+      style="
+        width: 500px;
+
+        border: 2px solid red;
+        margin: 10px;
+        padding: 10px;
+        box-shadow: 15px 0px 8px rgba(200, 0, 255, 0.5);
+        /* box-shadow: 15px 0px 8px hsla(253, 100%, 50%, 0.5); */
+      "
+    >
+      remember to use the box-shadow property to add shadows to elements. You
+      can specify the horizontal and vertical offsets, blur radius, spread
+      radius, and color of the shadow. For example:
+    </p>
+
+    <div class="SearchContainer">
+      <input type="text" class="Seachbox" placeholder="Search" />
+      <button class="SearchIconContainer">
+        <img src="search.png" alt="Search" class="SearchIcon" />
+      </button>
+    </div>
+  </body>
+</html>
