@@ -63,6 +63,72 @@
       .sec1 a:hover {
         background-color: #222222c3;
       }
+      .sec2 {
+        padding-top: 50px;
+        padding-left: 50px;
+        background-color: #ffffff;
+        text-align: center;
+        height: 200px;
+        color: #222;
+        min-height: 250px;
+      }
+
+      .sec2 div {
+        /* border: 1px solid #222; */
+        box-shadow: 0px 0px 2px #bbbbbb;
+        max-width: 160px;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      .sec2 div:hover {
+        box-shadow: 0px 0px 5px #d40000;
+        max-width: 170px;
+        height: 120px;
+        border-radius: 10px;
+      }
+      .sec2 div h4 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .sec2 div p {
+        padding-bottom: 10px;
+        padding-left: 6px;
+        padding-right: 6px;
+        font-size: 12px;
+      }
+      .sec2 .div1 {
+        float: left;
+      }
+      .sec2 .div2 {
+        /* float: left; */
+        /* margin-left: px; */
+      }
+      .sec2 .div3 {
+        float: right;
+        margin-right: 50px;
+      }
+      .sec3 {
+        background-color: #949494;
+        text-align: center;
+        height: 200px;
+        padding-top: 50px;
+        color: #222;
+      }
+      .sec3 h4 {
+        padding-bottom: 10px;
+      }
+      .sec3 p {
+        max-width: 520px;
+        margin: auto;
+        font-size: 12px;
+      }
+      .footer {
+        background-color: #222;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+      }
     </style>
   </head>
   <body>
@@ -80,5 +146,31 @@
       <p>A simple landing page built for practicing HTML and CSS.</p>
       <a href="#Features">Learn More</a>
     </section>
+
+    <section class="sec2">
+      <div class="div1">
+        <h4>Simple</h4>
+        <p>Clean and easy to understand code, perfect for beginners.</p>
+      </div>
+      <div class="div2">
+        <h4>Responsive-ish</h4>
+        <p>Uses flexbox so boxes wrap nicely on smaller screens.</p>
+      </div>
+      <div class="div3">
+        <h4>Practice Friendly</h4>
+        <p>Great starting point to add your own styles and sections.</p>
+      </div>
+    </section>
+    <section class="sec3" id="About">
+      <h4>About This Page</h4>
+      <p>
+        This landing pagea was created using only basic HTML and CSS — no
+        frameworks, no JavaScript. It's meant to be a simple, editable template
+        so you can practice styling, layout, and structure on your own.
+      </p>
+    </section>
+    <footer class="footer">
+      <p>&copy; 2023 MyPage. All rights reserved.</p>
+    </footer>
   </body>
 </html>
