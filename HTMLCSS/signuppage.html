@@ -4,7 +4,7 @@
   </head>
   <body>
     <h1>Signup Form</h1>
-    <form>
+    <form id="signupForm">
       <p
         style="
           background-color: lightgray;
@@ -13,7 +13,7 @@
           text-align: center;
         "
       >
-        Username: <input type="text" placeholder="username" />
+        Username: <input type="text" placeholder="username" id="username" />
       </p>
       <p
         style="
@@ -35,7 +35,23 @@
       >
         Mobile number : <input type="number" placeholder="123456789" />
       </p>
-      <p><input type="submit" /> <input type="reset" /></p>
+      <p>
+        <button type="submit" onclick="submitForm()">Submit</button>
+        <input type="reset" />
+      </p>
     </form>
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+          submitForm();
+        });
+
+      function submitForm() {
+        const username = document.getElementById("username").value;
+        console.log("Username:", username);
+      }
+    </script>
   </body>
 </html>
