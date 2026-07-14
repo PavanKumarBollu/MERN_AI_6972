@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+    <style>
+      .navbar {
+        background-color: #222;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        /* justify-content is used for delaing the childs horizontally */
+        /* jalign-items is used for delaing the childs vertically */
+        align-items: center;
+      }
+      button {
+        background: transparent;
+        border: none;
+        color: white;
+      }
+      .left {
+        background-color: pink;
+        margin-left: 10px;
+      }
+      .right {
+        background-color: lightblue;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="left">
+          <button>NavBar</button>
+          <button>Home</button>
+          <button>Features</button>
+          <button>Pricing</button>
+        </div>
+        <div class="right">
+          <button>Navbar text with an inline element</button>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
