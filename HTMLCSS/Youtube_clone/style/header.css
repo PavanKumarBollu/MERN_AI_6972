@@ -1,0 +1,69 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.5);
+}
+.icon {
+  width: 25px;
+  cursor: pointer;
+}
+
+.nav-container .nav-left {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.nav-container .nav-left .Menu {
+  margin-right: 20px;
+}
+.nav-container .nav-left .Logo {
+}
+
+.nav-container .nav-center {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container .nav-center .search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 450px;
+  margin-right: 20px;
+}
+
+.nav-container .nav-center .search-container input {
+  flex: 1;
+  /* flex-shrink: 1; */
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  background: transparent;
+
+  /* background-color: lightblue; */
+  /* padding-left: 20px; */
+}
+
+.nav-container .nav-center .search-container img {
+  width: 25px;
+}
+
+.nav-container .nav-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 200px;
+}
+.nav-container .nav-right .profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(180, 26, 26);
+}
