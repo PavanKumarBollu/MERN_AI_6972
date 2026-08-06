@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inputField" placeholder="Type something..." />
+    <button id="btn">ClickHere</button>
+    <p id="output">Dummy Text</p>
+    <script>
+      let userInput = document.getElementById("inputField");
+      let btn = document.getElementById("btn");
+      let para = document.getElementById("output");
+
+      btn.addEventListener("click", function () {
+        // console.log(userInput.value);
+        para.textContent = userInput.value;
+        // para.innerHTML = userInput.value;
+      });
+    </script>
+  </body>
+</html>

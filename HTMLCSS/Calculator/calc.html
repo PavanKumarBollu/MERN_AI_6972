@@ -98,27 +98,35 @@
       </div>
     </div>
     <script>
-      document.querySelectorAll(".btn").forEach((button) => {
-        button.addEventListener("click", () => {
-          const userInput = document.querySelector(".userinput");
-          const outputText = document.querySelector(".outputtext");
-          const buttonValue = button.textContent;
+      let buttons = (document.querySelectorAll(".btn").innerHTML =
+        "<P>hello</p>");
+      document.querySelector(".btn").innerHTML = "<P>hello</p>";
+      // document.querySelector(".btn").innerText = "<P>hello</p>";
+      // console.log(buttons);
 
-          if (buttonValue === "C") {
-            userInput.textContent = "";
-            outputText.textContent = "";
-          } else if (buttonValue === "=") {
-            try {
-              const result = eval(userInput.textContent);
-              outputText.textContent = result;
-            } catch (error) {
-              outputText.textContent = "Error";
-            }
-          } else {
-            userInput.textContent += buttonValue;
-          }
-        });
-      });
+      // document.querySelectorAll(".btn").forEach((button) => {
+      //   button.addEventListener("click", () => {
+      //     const userInput = document.querySelector(".userinput");
+      //     const outputText = document.querySelector(".outputtext");
+      //     const buttonValue = button.textContent;
+
+      //     if (buttonValue === "C") {
+      //       userInput.textContent = "";
+      //       outputText.textContent = "";
+      //     } else if (buttonValue === "=") {
+      //       try {
+      //         const result = eval(userInput.textContent);
+      //         outputText.textContent = result;
+      //       } catch (error) {
+      //         outputText.textContent = "Error";
+      //       }
+      //     } else {
+      //       userInput.textContent += buttonValue;
+      //     }
+      //   });
+      // });
+
+      // console.log(document);
     </script>
   </body>
 </html>
