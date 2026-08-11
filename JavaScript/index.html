@@ -6,7 +6,25 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- <button class="btn">Click</button> -->
+    <!-- <button class="btn btnminus">-</button>
+    <span id="result">0</span>
+    <button class="btn btnplus">+</button> -->
+    <span id="test">0</span>
+    <button class="btnt">A</button>
+    <button class="btnt">B</button>
+    <button class="btnt">C</button>
+    <button class="btnt">D</button>
+
+    <script>
+      let text = document.getElementById("test");
+
+      document.querySelectorAll(".btnt").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          text.innerText = text.innerText + btn.innerHTML;
+        });
+      });
+    </script>
+
     <!-- <script src="intro.js"></script> -->
     <!-- <script src="Variables.js"></script> -->
     <!-- <script src="DataTypes.js"></script> -->
@@ -42,6 +60,28 @@
       details.wish("java");
       console.log(details.techSkills);
     </script> -->
-    <script src="Patterns.js"></script>
+    <!-- <script src="Patterns.js"></script> -->
+    <!-- <script src="namepattern.js"></script> -->
+    <script>
+      let btnminus = document.querySelector(".btnminus");
+      let btnplus = document.querySelector(".btnplus");
+      // console.log(btn);
+      let res = document.getElementById("result");
+
+      btnminus.addEventListener("click", () => {
+        res.innerText = Number(res.innerText) - 1;
+        // console.log(btn.innerHTML);
+        // console.log(res);
+      });
+
+      btnplus.addEventListener("click", () => {
+        res.innerText = Number(res.innerText) + 1;
+      });
+
+      // function test() {
+      //   console.log("button is cliced");
+      // }
+      // test();
+    </script>
   </body>
 </html>

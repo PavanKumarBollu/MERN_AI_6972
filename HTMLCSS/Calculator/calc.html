@@ -98,35 +98,36 @@
       </div>
     </div>
     <script>
-      let buttons = (document.querySelectorAll(".btn").innerHTML =
-        "<P>hello</p>");
-      document.querySelector(".btn").innerHTML = "<P>hello</p>";
+      // let buttons = (document.querySelectorAll(".btn").innerHTML =
+      // "<P>hello</p>");
+      // document.querySelector(".btn").innerHTML = "<P>hello</p>";
       // document.querySelector(".btn").innerText = "<P>hello</p>";
       // console.log(buttons);
 
-      // document.querySelectorAll(".btn").forEach((button) => {
-      //   button.addEventListener("click", () => {
-      //     const userInput = document.querySelector(".userinput");
-      //     const outputText = document.querySelector(".outputtext");
-      //     const buttonValue = button.textContent;
+      document.querySelectorAll(".btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const userInput = document.querySelector(".userinput");
+          const outputText = document.querySelector(".outputtext");
+          const buttonValue = button.textContent;
 
-      //     if (buttonValue === "C") {
-      //       userInput.textContent = "";
-      //       outputText.textContent = "";
-      //     } else if (buttonValue === "=") {
-      //       try {
-      //         const result = eval(userInput.textContent);
-      //         outputText.textContent = result;
-      //       } catch (error) {
-      //         outputText.textContent = "Error";
-      //       }
-      //     } else {
-      //       userInput.textContent += buttonValue;
-      //     }
-      //   });
-      // });
+          if (buttonValue === "C") {
+            userInput.textContent = "";
+            outputText.textContent = "";
+          } else if (buttonValue === "=") {
+            try {
+              const result = eval(userInput.textContent);
+              outputText.textContent = result;
+            } catch (error) {
+              outputText.textContent = "Error";
+            }
+          } else {
+            userInput.textContent += buttonValue;
+            userInput.textContent = userInput.textContent + buttonValue;
+          }
+        });
+      });
 
-      // console.log(document);
+      console.log(document);
     </script>
   </body>
 </html>

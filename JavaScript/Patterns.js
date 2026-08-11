@@ -29,57 +29,57 @@ const size = 5;
 // }
 
 // //5
-const rows = 5;
+// const rows = 5;
 
-for (let i = 0; i < rows; i++) {
+// for (let i = 0; i < rows; i++) {
+//   let rowStr = "";
+
+//   // 1. Print leading spaces
+//   for (let j = 0; j < i; j++) {
+//     rowStr += " ";
+//   }
+
+//   // 2. Print stars (odd numbers: 9, 7, 5, 3, 1)
+//   for (let k = 0; k < 2 * (rows - i) - 1; k++) {
+//     rowStr += "*";
+//   }
+
+//   console.log(rowStr);
+// }
+// // 6
+
+const n = 5; // Controls the size (number of rows in the top half)
+
+// 1. Top Half (Upright Triangle)
+for (let i = 1; i <= n; i++) {
   let rowStr = "";
 
-  // 1. Print leading spaces
-  for (let j = 0; j < i; j++) {
+  // Print leading spaces
+  for (let j = 1; j <= n - i; j++) {
     rowStr += " ";
   }
 
-  // 2. Print stars (odd numbers: 9, 7, 5, 3, 1)
-  for (let k = 0; k < 2 * (rows - i) - 1; k++) {
+  // Print stars
+  for (let k = 1; k <= 2 * i - 1; k++) {
     rowStr += "*";
   }
 
   console.log(rowStr);
 }
-// // 6
-
-//   const n = 5; // Controls the size (number of rows in the top half)
-
-//       // 1. Top Half (Upright Triangle)
-//       for (let i = 1; i <= n; i++) {
-//         let rowStr = "";
-
-//         // Print leading spaces
-//         for (let j = 1; j <= n - i; j++) {
-//           rowStr += " ";
-//         }
-
-//         // Print stars
-//         for (let k = 1; k <= 2 * i - 1; k++) {
-//           rowStr += "*";
-//         }
-
-//         console.log(rowStr);
-//       }
 
 //       // 2. Bottom Half (Upside-Down Triangle)
-//       for (let i = n - 1; i >= 1; i--) {
-//         let rowStr = "";
+for (let i = n - 1; i >= 1; i--) {
+  let rowStr = "";
 
-//         // Print leading spaces
-//         for (let j = 1; j <= n - i; j++) {
-//           rowStr += " ";
-//         }
+  // Print leading spaces
+  for (let j = 1; j <= n - i; j++) {
+    rowStr += " ";
+  }
 
-//         // Print stars
-//         for (let k = 1; k <= 2 * i - 1; k++) {
-//           rowStr += "*";
-//         }
+  // Print stars
+  for (let k = 1; k <= 2 * i - 1; k++) {
+    rowStr += "*";
+  }
 
-//         console.log(rowStr);
-//       }
+  console.log(rowStr);
+}

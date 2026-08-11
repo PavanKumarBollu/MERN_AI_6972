@@ -1,0 +1,36 @@
+click
+ddclick
+mousedown
+mouseup
+mousemove
+mouseenter
+mouseleave
+mouseout
+keydown
+keyup
+keypress(deprecated)
+submit
+input(used when you want to track the changes of the input)
+change
+focus
+blur
+focusin
+focusout
+touchstart
+touchmove
+touchend
+DOMContentLoaded
+load
+resize
+scroll
+unload
+play
+pause
+ended
+volumechange
+dragstart
+dragover
+drop
+customevent
+
+Custom EventsYou can also pass a completely custom string if you are dispatching your own events using the CustomEvent API.'myCustomEvent': Triggers only when manually dispatched via code (element.dispatchEvent(new CustomEvent('myCustomEvent'))).
