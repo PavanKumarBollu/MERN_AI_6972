@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css manipulation</title>
+    <style>
+      #name {
+        font-size: 20px;
+      }
+      .nonvis {
+        display: none;
+      }
+
+      .container {
+        width: 400px;
+        height: 400px;
+        float: right;
+        /* position: fixed;
+        top: 200px;
+        left: 0; */
+      }
+      .showoff {
+        float: left;
+        /* margin-top: 200px; */
+      }
+      .container img {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p id="name">Andip Foundation</p> -->
+    <div class="container">
+      <img src="381668.jpg" alt="walpaper" class="img" />
+    </div>
+    <button class="btn">Click</button>
+
+    <script>
+      //   let output = document.getElementById("name");
+      //   let btnclick = document.querySelector(".btn");
+      //   console.log(output);
+      //   console.log(btnclick);
+
+      //   btnclick.addEventListener("click", () => {
+      //     // output.style.backgroundColor = "red";
+      //     // output.style.fontSize = "40px";
+      //     // output.style.margin = "10px";
+      //     // output.style.padding = "10px";
+      //     // if (output.style.display == "none") {
+      //     //   output.style.display = "block";
+      //     // } else {
+      //     //   output.style.display = "none";
+      //     // }
+
+      //     output.classList.toggle("nonvis");
+      //   });
+      let btnclick = document.querySelector(".btn");
+      let imgc = document.querySelector(".container");
+      btnclick.addEventListener("click", () => {
+        // imgc.classList.toggle("nonvis");
+        imgc.classList.toggle("showoff");
+        imgc.classList.toggle(".container");
+      });
+    </script>
+  </body>
+</html>
