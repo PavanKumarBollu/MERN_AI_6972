@@ -106,7 +106,7 @@ const pages = document.querySelectorAll(".page");
 // console.log(pages);
 
 function getRoute() {
-  return location.hash.replace(/^#/, "" || "/");
+  return location.hash.replace(/^#/, "") || "/";
 }
 // getRoute();
 
@@ -117,14 +117,70 @@ function showPages(pageName) {
 }
 async function render() {
   const route = getRoute();
+  console.log(route);
   if (route === "/" || route === "home") {
     showPages("home");
     return;
-  } else if (route === "/login") {
+  }
+  if (route === "/login") {
     showPages("login");
+    return;
+  }
+  if (route === "/register") {
+    showPages("register");
+    return;
+  }
+  if (route === "/jobs") {
+    showPages("jobs");
+    return;
+  }
+  if (route === "/my-applications") {
+    showPages("my-applications");
+    return;
+  }
+  if (route === "/my-jobs") {
+    showPages("my-jobs");
+    return;
+  }
+  if (route === "/post-job") {
+    showPages("post-job");
+    return;
+  }
+  if (route === "/admin/users") {
+    showPages("admin/users");
     return;
   }
 }
 
 window.addEventListener("hashchange", render);
 //3 end
+
+// 4 start
+
+// {
+// email
+// name
+// role
+// token
+
+// }
+// save the user to the localstorage
+// get the user from the localstorage
+function getUser() {
+  try {
+    return JSON.parse(localStorage.getItem("jobportal_user")) || null;
+  } catch (error) {
+    // toast("user not found", true);
+    // console.log("something wrong in getting the user", errror);
+    return null;
+  }
+}
+
+function setUser(user) {
+  if (user) {
+    localStorage.setItem("jobportal_user", JSON.stringify(user.token));
+  } else {
+    localStorage.removeItem("jobportal_user");
+  }
+}
+// 4 end
