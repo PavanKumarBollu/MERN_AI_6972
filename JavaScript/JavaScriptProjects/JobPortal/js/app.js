@@ -162,7 +162,6 @@ window.addEventListener("hashchange", render);
 // name
 // role
 // token
-
 // }
 // save the user to the localstorage
 // get the user from the localstorage
@@ -183,4 +182,87 @@ function setUser(user) {
     localStorage.removeItem("jobportal_user");
   }
 }
+
+function getToken() {
+  return getUser()?.token || "";
+}
+
+function isLoggedIn() {
+  return !!getUser();
+}
+
+function requireLogin() {
+  if (!isLoggedIn()) {
+    location.hash = "#/login";
+    toast("Please Login First", true);
+    return false;
+  }
+  return true;
+}
+
+function requireRole(role) {
+  const user = getUser();
+  if (!user) {
+    location.hash = "#/login";
+    toast("Please Login First", true);
+    return false;
+  }
+  if (user.role !== role) {
+    location.hash = "#/";
+    toast("you don't have access to this page", true);
+    return false;
+  }
+  return true;
+}
+
 // 4 end
+
+// 5 part start
+// name;
+// email;
+// phone;
+// password;
+// skills;
+// role
+
+function setupRegister() {
+  const form = get("register-form");
+  if (!form) return;
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    console.log("test");
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      console.log(data);
+      const user = await API.post("/auth/register", data);
+      setUser(user);
+      toast("Account Created SuccesFully");
+      form.reset();
+      location.hash = "#/dashboard";
+    } catch (error) {
+      toast(error.message, true);
+    }
+  });
+}
+function setupLogin() {
+  const form = get("login-form");
+  if (!form) return;
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    console.log("test");
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      console.log(data);
+      const user = await API.post("/auth/login", data);
+      setUser(user);
+      toast("Login SuccesFully");
+      form.reset();
+      location.hash = "#/dashboard";
+    } catch (error) {
+      toast(error.message, true);
+    }
+  });
+}
+setupRegister();
+setupLogin();
+// 5 part end
