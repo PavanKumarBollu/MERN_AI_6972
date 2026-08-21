@@ -177,7 +177,7 @@ function getUser() {
 
 function setUser(user) {
   if (user) {
-    localStorage.setItem("jobportal_user", JSON.stringify(user.token));
+    localStorage.setItem("jobportal_user", JSON.stringify(user));
   } else {
     localStorage.removeItem("jobportal_user");
   }
@@ -252,7 +252,7 @@ function setupLogin() {
     console.log("test");
     const data = Object.fromEntries(new FormData(form));
     try {
-      console.log(data);
+      // console.log(data);
       const user = await API.post("/auth/login", data);
       setUser(user);
       toast("Login SuccesFully");
